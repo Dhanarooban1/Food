@@ -261,10 +261,11 @@ letter-spacing: 1%;
   height: 100px;
   background-color: #690514ff;
   z-index: 1;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
-
+  display: none;
+  padding: 10px 20px;
 }
 
 #poptxt{
@@ -274,7 +275,7 @@ letter-spacing: 1%;
 }
 
 #pop_content img {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
  margin-left: 130px;
  width: 50px;
@@ -573,5 +574,70 @@ letter-spacing: 1%;
 
 
   
+  @media screen and (max-width:400px){
+    
+    body{
+      margin: 0;
+      padding: 0;
+      background-attachment: fixed;
+      
+    }
+  
+    #introvideo{
+      height: auto; 
+      width:110%; 
+      background-attachment: fixed;
+    }
+  
+    #introvideosrc{
+      border: none;
+    }
+    
+    .wrapper{
+      width: 100%;
+      transform: translate(3%,5%);
+    
+    }
+    #txt{
+      width: 100%;
+      margin-left: 20px;
+      transform: translate(0%,-150%);
+      /* display: none; */
+    }
+  
+    #topnav{
+      display: none;
+    }
+    #txt img{
+      width: 85vw;
+      /* display: none; */
+    }
+    .second-page{
+      display: none;
+
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important;
+    }
+  
+
+    .top-img{
+      display: none;
+    }
+    #container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); 
+      grid-gap: 20px; 
+      transform: translate(3%,1%);
+      
+      }
+      #myInputField{
+        transform: translate(5%,0%);
+        width: 90%;
+      }
+      .pg2_txt_content{
+        display: none;
+      }
+  }
 
 
+  
+  
