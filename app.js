@@ -2,14 +2,21 @@ const URL = `https://www.themealdb.com/api/json/v1/1/random.php`
 
 let imgBox = document.getElementById('imgBox');
 let instructions = document.getElementById('instruction');
-let poPup= document.getElementById("popup");
 let alink = document.getElementById("alink");
 let youtubeLink = document.getElementById("youtubeLink");
+let randomImage = document.getElementById("randomImage");
+let randomName=document.getElementById('randomName')
+
+
 
 
 function RandomFood(){
   let popup = document.getElementById("popup");
+  let popupMobile = document.getElementById("popupMobile");
   popup.innerHTML=""
+  popupMobile.innerHtml = ""
+
+
 
   axios.get(URL)
   .then(response => {
@@ -20,11 +27,15 @@ function RandomFood(){
     let article = meal.strSource;
     let youtube = meal.strYoutube;  
     let data = response.data.meals[0];
-    let div = document.createElement("div");   div.className='ingredients-div';
+    let div = document.createElement("div"); div.className='ingredients-div';
+
+    document.getElementById('name').innerHTML = name
     imgBox.innerHTML = `<img src="${imageUrl}" alt="Meal Image">`;
-    name.innerHTML = name
     alink.href = article
     youtubeLink.href = youtube;
+
+    randomName.innerHTML=meal.strMeal
+    randomImage.src =imageUrl;
   // POP
     for(let i=1;i<=20;i++){
       let p=document.createElement("p");
@@ -34,7 +45,11 @@ function RandomFood(){
         div.append(p)
       }
     }
-    popup.append(div);
+    let newIngredient = document.createElement('div')
+    newIngredient.className='ingredients-div';
+    newIngredient.innerHTML = div.innerHTML;
+    popup.append(newIngredient);
+    popupMobile.append(div); 
   })
   .catch(error => console.error(error.message));
 }
@@ -72,3 +87,16 @@ document.getElementById('refreshButton').addEventListener('click', function() {
     });
     document.getElementById("container").innerHTML = elements.join(" ");
    };
+
+   let closeBtnMobile = document.getElementById("closeBtn_mobile");
+   let mobileIn = document.getElementById("mobilein");
+   
+   closeBtnMobile.addEventListener('click', function() {
+       mobileIn.style.display = 'none';
+   });
+
+let open = document.getElementById("randomImage");
+
+open.addEventListener('click', function() {
+    mobileIn.style.display = 'block';
+});
