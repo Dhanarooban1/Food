@@ -1,3 +1,15 @@
+let closeButton = document.getElementById("closeButton");
+let popContent = document.getElementById("pop_content");
+
+closeButton.addEventListener('click', function() {
+   popContent.style.display = 'none';
+});
+
+let learnButton = document.getElementById("learn-btn");
+
+learnButton.addEventListener('click', function() {
+  popContent.style.display = 'block';
+});
 
 document.getElementById('ScrollBtn').addEventListener('click', function() {
   smoothScrollTo(document.body.scrollHeight, 1500);
