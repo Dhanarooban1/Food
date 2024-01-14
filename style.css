@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 300vh;
-  background-image: url("bg.png");
+  background-image: url("Startpageasset/bg.png");
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -349,6 +349,9 @@ letter-spacing: 1%;
     height: 100%;
     width: 100%;
   }
+
+
+  
   
   .card .imgBox {
     width: 100%;
@@ -497,17 +500,13 @@ letter-spacing: 1%;
 
 
 
-/* 
-#randomDiv{
-  z-index: 1;
-  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.319);
-  width: 100%;
-  height: 100%;
-} */
 
- 
 
 /* page3 */
+
+
+
+
 #mobilein{
   display: none;
 }
@@ -608,7 +607,7 @@ letter-spacing: 1%;
       width: 100%;
       margin-left: 20px;
       transform: translate(0%,-160%);
-      /* display: none; */
+    
     }
   
     #topnav{
@@ -648,6 +647,7 @@ letter-spacing: 1%;
         height: 200px;
         border-radius: 2%;
         padding: 5%;
+        
       }
       #randomDiv{
         position: absolute;
@@ -663,37 +663,68 @@ letter-spacing: 1%;
         backdrop-filter: blur(2px);
         transition: transform 0.5s, backdrop-filter 0.5s;
         border-radius: 2%;
+        margin-top: -50px;
       }
       #randomDiv>div:hover{
         transform: scale(1.06);
         backdrop-filter: blur(5px);
       }
      #mobilein{
-      overflow: auto;
+      
       display: none;
       position: absolute;
       z-index: 4;
-      transform: translate(5%,250%);
-      width: 100%;
       box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.319);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       backdrop-filter: blur(5px);
       transition: transform 0.5s, backdrop-filter 0.5s;
-   
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%,50%);
+      width: 100%;
+      overflow: auto;
+      height: 40vh;
+      margin-left: 10px;
+      margin-top: -100px;
+  display: flex;
+  align-items: center;
+   flex-direction: column;
+   justify-content: center;
      }
-     #closeBtn_mobile{
+
+#popupMobile{
+display: grid;
+grid-template-columns: (1fr, 1fr, 1fr) ;
+gap: -10px;
+
+}
+
+#closeBtn_mobile{
        transform: translate(600%,0%);
      }
+
+     #referButton {
+
+      background-color: rgb(255, 189, 36); 
+      font-family: 'Lora', serif;
+      color: white; 
+      border: none; 
+      padding: 1px 10px;
+      font-size: 1em; 
+      /* font-weight: bold;  */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Pointer cursor on hover */
+      transition: background-color 0.3s ease; /* Smooth background color transition */
+    }
+    
+    #referButton:hover {
+      background-color: rgb(255, 190, 0); /* Darker orange background on hover */
+    }
+    
+    #referButton:active {
+      transform: scale(0.98); /* Slightly scale down the button when clicked */
+    }
+       
+
   }
- 
 
   
-    /* border: 5px solid green ;
-        display: flex;
-        /* align-items: center; 
-        /* justify-content: center; 
-        width: 100px;
-        height: 100px; */

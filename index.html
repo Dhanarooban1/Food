@@ -18,9 +18,11 @@
     <div id="randomDiv">
       <img id="randomImage" src="" alt="Random Image" />
       <p id="randomName">Random Name</p>
+      <button id="referButton">D i s c o v e r</button>
     </div>
     <div id="mobilein">
-      <i class="material-symbols-outlined" id="closeBtn_mobile">close</i>
+      <i class="material-symbols-outlined" onclick="Close();" id="closeBtn_mobile">close</i>
+      <p style="color: aliceblue;">Ingredients</p>
       <div style="color: aliceblue" id="popupMobile"></div>
     </div>
     <!-- page1 -->
@@ -36,11 +38,11 @@
       </div>
 
       <div id="topnav">
-        <ul>
+        <ul>  
           <li><a href="">HOME</a></li>
-          <li><a id="randomMealSection" href="">RANDOM MEAL SECTION</a></li>
-          <li><a href="">MENU</a></li>
-          <li><a href="">ABOUT US</a></li>
+          <li><a id="randomMealSection"  onclick="event.preventDefault(); scrollToTop();">RANDOM MEAL SECTION</a></li>
+          <li><a  onclick="event.preventDefault();mBtn();" href="">MENU</a></li>
+          <li><a href="https://www.linkedin.com/in/r-dhana-rooban-5441b2283/" target="_blank">ABOUT US</a></li>
         </ul>
       </div>
 
@@ -60,13 +62,13 @@
         </div>
       </div>
 
-      <button id="ScrollBtn">
+      <button  onclick="scrollToTop()"  id="ScrollBtn">
         <img id="scroll-down-btn" src="Startpageasset/down-arrow.png" alt="" />
       </button>
     </div>
 
     <!-- page2 -->
-
+    
     <div class="pg2_txt_content">
       <div class="top-img">
         <img src="Startpageasset/line.png" alt="" />
@@ -96,26 +98,13 @@
         <img src="Startpageasset/line.png" alt="" />
       </div>
     </div>
-    <!-- <div id="bnt_chief_order">
-  <button class="pushable" id="chiefbtn">
-    <span class="shadow"></span>
-    <span class="edge"></span>
-    <span class="front">call chief</span>
-  </button>
   
-  <button class="pushable" id="prebtn">
-    <span class="shadow"></span>
-    <span class="edge"></span>
-    <span class="front">PRE-ORDER</span>
-  </button>
-</div> -->
-
     <div class="second-page">
       <div id="pop_content" class="content">
-        <i class="material-symbols-outlined" id="closeButton">close</i>
+        <i class="material-symbols-outlined" onclick="closeGuideW()" id="closeButton">close</i>
         <p id="poptxt">REFER:</p>
         <div id="pop_inside_content">
-          <a id="youtubeLink" target="_blank" href="">
+          <a id="youtubeLink" target="_blank" link.href="">
             <img
               src="Startpageasset/youtube.png"
               alt="Image Description"
@@ -132,27 +121,22 @@
         </div>
       </div>
       <div id="card_down_btn">
-        <button class="pushable" id="refreshButton">
+        <button class="pushable" onclick=" RandomFood()" id="refreshButton">
           <span class="shadow"></span>
           <span class="edge"></span>
           <span class="front">Discover Delicious ingredients</span>
         </button>
 
-        <button
-          class="pushable"
-          id="learn-btn"
-          onclick="document.getElementById('content').style.display='block'"
-        >
+        <button class="pushable" id="learn-btn" onclick= "event.preventDefault();displayGuide();">
           <span class="shadow"></span>
           <span class="edge"></span>
           <span class="front">Guide to Cookify</span>
         </button>
       </div>
+   
 
       <div class="card">
-        <div class="imgBox" id="imgBox">
-          <!-- <img src="" alt="" /> -->
-        </div>
+        <div class="imgBox" id="imgBox"></div>
         <div class="details">
           <h2
             id="name"
