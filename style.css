@@ -189,12 +189,11 @@ ul li a:hover::after {
   justify-content: center;
   margin-top: -2%;
   transform: translate(0%,-30%);
-    /* border: 5px solid rgb(34, 255, 0); */
+
 }
 .top-img{
   position: absolute;
   margin-top: 80px;
- /* border: 1px solid black; */
 }
 
 .bottom-image{
@@ -542,7 +541,7 @@ letter-spacing: 1%;
     display: flex;
     justify-content: center;
     transform: translate(0%, 150%);
-   
+   margin-top: 50%;
   }
 
 
@@ -574,7 +573,7 @@ letter-spacing: 1%;
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   body {
     margin: 0;
     padding: 0;
@@ -597,13 +596,14 @@ letter-spacing: 1%;
   }
 
   #txt {
-    width: 100%;
-    margin-left: 20px;
-    transform: translate(0%, -160%);
+    height: auto;
+    margin-top: 40%;
+    margin-left: 10%;
   }
 
   #topnav {
     display: none;
+
   }
 
   #txt img {
@@ -636,10 +636,10 @@ letter-spacing: 1%;
   }
 
   #randomDiv img {
-    width: 200px;
-    height: 200px;
+
+    width: 50%;
+    height: 50%;
     border-radius: 2%;
-    padding: 5%;
   }
 
   #randomDiv {
@@ -648,6 +648,7 @@ letter-spacing: 1%;
     transform: translate(5%, 250%);
     width: 100%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.319);
+ 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -655,7 +656,7 @@ letter-spacing: 1%;
     backdrop-filter: blur(2px);
     transition: transform 0.5s, backdrop-filter 0.5s;
     border-radius: 2%;
-    margin-top: -50px;
+    margin-top: 50%;
   }
 
   #randomDiv > div:hover {
