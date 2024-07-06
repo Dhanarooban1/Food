@@ -712,4 +712,7 @@ letter-spacing: 1%;
   #referButton:active {
     transform: scale(0.98);
   }
+  .search-container{
+    margin-top: 50%;
+  }
 }
